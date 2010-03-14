@@ -1,5 +1,7 @@
 ;PortableApps.com Installer Copyright 2004-2007 John T. Haller
 ;Perl Portable additions Copyright 2007 Shawn Faucher
+;Perl Portable additions to the Perl Portable additions Copyright 2010 Chazz Wolcott
+
 
 ;Website: http://PerlPortable.Sourceforge.net
 
@@ -37,7 +39,7 @@
 !define INSTALLERLEGALCOPYRIGHT "PortableApps.com and contributors"
 ;!define LICENSEAGREEMENT "eula.rtf"
 ; NOTE: For no license agreement, comment out the above line by placing a semicolon at the start of it
-!define MAINSECTIONTITLE "Perl Portable (CommonFiles) [Required]"
+!define MAINSECTIONTITLE "Perl Portable [Required]"
 !define OPTIONALSECTIONTITLE "Development Tools"
 !define OPTIONALSECTIONDESCRIPTION "Development tools for compiling Perl Modules"
 ;=== END: BASIC INFORMATION

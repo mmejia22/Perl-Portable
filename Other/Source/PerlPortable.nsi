@@ -1,6 +1,6 @@
 ;Copyright (C) 2004-2008 John T. Haller
 ;Copyright (C) 2007-2008 Shawn Faucher
-;Copyright (C) 2009-2010 Michael Mejia
+;Copyright (C) 2009-2010 Chazz Wolcott
 
 ;Website: http://PortableApps.com/PerlPortable
 
@@ -218,9 +218,9 @@ Section "Main"
 		ReadEnvStr $0 PATH
 		ReadEnvStr $1 LIB
 		ReadEnvStr $2 INCLUDE
-		System::Call "Kernel32::SetEnvironmentVariableA(t, t) i('PATH', '$EXEDIR\App\${DEFAULTAPPDIR}\c\bin;$PORTABLEAPPSDIRECTORY\CommonFiles\Perl\bin;$0').r0"
-		System::Call "Kernel32::SetEnvironmentVariableA(t, t) i('LIB', '$EXEDIR\App\${DEFAULTAPPDIR}\c\lib;$PORTABLEAPPSDIRECTORY\CommonFiles\Perl\bin;$1').r0"
-		System::Call "Kernel32::SetEnvironmentVariableA(t, t) i('INCLUDE', '$EXEDIR\App\${DEFAULTAPPDIR}\c\include;$PORTABLEAPPSDIRECTORY\CommonFiles\Perl\lib\CORE;$2').r0"
+		System::Call "Kernel32::SetEnvironmentVariableA(t, t) i('PATH', '$EXEDIR\App\${DEFAULTAPPDIR}\c\bin;$EXEDIR\App\${DEFAULTAPPDIR}\Perl\bin;$0').r0"
+		System::Call "Kernel32::SetEnvironmentVariableA(t, t) i('LIB', '$EXEDIR\App\${DEFAULTAPPDIR}\c\lib;$EXEDIR\App\${DEFAULTAPPDIR}\Perl\bin;$1').r0"
+		System::Call "Kernel32::SetEnvironmentVariableA(t, t) i('INCLUDE', '$EXEDIR\App\${DEFAULTAPPDIR}\c\include;$EXEDIR\App\${DEFAULTAPPDIR}\Perl\lib\CORE;$2').r0"
 		System::Call "Kernel32::SetEnvironmentVariableA(t, t) i('PERLDEVROOT', '$EXEDIR\App\${DEFAULTAPPDIR}').r0"
 
 		;=== Get any passed parameters
